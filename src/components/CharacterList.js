@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import CharacterCard from './CharacterCard';
@@ -27,8 +26,7 @@ export default function CharacterList() {
       console.log(e.target.value)
       setSearch(e.target.value)
       
-      setList(list.filter( char => char.name.toLowerCase().includes(search.toLocaleLowerCase() ) ) )
-      
+      setList(list.filter( char => char.name.toLowerCase().includes(search.toLocaleLowerCase()) ))
     }
 
   return (
